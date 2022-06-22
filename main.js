@@ -1,1 +1,1 @@
-const DNAtoRNA = dna => dna.replace(/T/g, "U")
+const makeNegative = num => -Math.abs(num)
