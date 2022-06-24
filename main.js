@@ -1,14 +1,21 @@
-function calculateYears(principal, interest, tax, desired) {
-    let years = 0;
-    console.log(principal, interest, tax, desired);
-    while(principal <= desired) {
-        years++;
-        let int = principal * interest;
-        principal = principal + int - tax*int
-    }
+// const number = function(array){
+//     let num = 1;
+//     for (let i = 0; i < array.length; i++) {
+//         array[i] = `${num}: ${array[i]}`;
+//         num++;
+//     }
+//     return array;
+// }
 
-    return years;
+const number = function(array) {
+    return array.map((el, index) => `${index + 1}: ${el}` )
 }
 
-console.log(calculateYears(1000, 0.05, 0.18, 1100));
-console.log(calculateYears(1000,0.05,0.18,1000));
+console.log(number(["a", "b", "c"]))
+
+
+// var number = function(array) {
+//     return array.map(function (line, index) {
+//       return (index + 1) + ": " + line;
+//     });
+//   }
