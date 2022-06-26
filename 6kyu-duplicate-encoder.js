@@ -10,4 +10,3 @@ function duplicateEncode(input){
   }
   return newStr;
 }
-
