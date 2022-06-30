@@ -7,9 +7,5 @@ function duplicateCount(text){
     }
   });
   const mySet = new Set(redux);
-  return mySet.size
+  return mySet.size;
 }
-
-
-console.log(duplicateCount('abaaadddaaacef'))
-
