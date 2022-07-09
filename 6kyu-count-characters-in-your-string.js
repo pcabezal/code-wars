@@ -1,5 +1,5 @@
 function count (str) {  
-    let arr = str.split('').sort();
+    let arr = str.split('');
     let obj = {};
     arr.forEach(element => {
         obj[element] = obj[element] + 1 || 1;
