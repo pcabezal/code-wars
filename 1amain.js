@@ -1,10 +1,10 @@
-function count (str) {  
-    let arr = str.split('').sort();
-    let obj = {};
-    arr.forEach(element => {
-        obj[element] = obj[element] + 1 || 1;
-    })
-    return obj;
-}
+function queueTime(customers, n) {
+    let sum = customers.reduce((p,c) => p + c, 0);
+    return sum/n;
+  }
 
-console.log(count('anusa'));
+
+console.log(queueTime([], 1));
+console.log(queueTime([1,2,3,4], 1));
+console.log(queueTime([2,2,3,3,4,4], 2));
+console.log(queueTime([1,2,3,4,5], 100));
