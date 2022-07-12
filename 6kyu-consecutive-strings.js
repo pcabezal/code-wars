@@ -1,3 +1,5 @@
+//this is the ugliest coding challenge I have ever done
+
 function longestConsec(strarr, k) {
   if (k <= 0 || k > strarr.length) return '';
   let count = 0;
@@ -17,11 +19,8 @@ function longestConsec(strarr, k) {
     }
   });
 
-  max = Math.max(...arr.map(e => e.length))
+  max = Math.max(...arr.map(e => e.length)) 
 
   return arr.find(e => e.length == max);
-
 }
 
-console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2));
-console.log(longestConsec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3));
