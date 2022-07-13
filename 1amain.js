@@ -17,6 +17,8 @@ function longestConsec(strarr, k) {
     }
   });
 
+  console.log(arr.map(e => e.length));
+
   max = Math.max(...arr.map(e => e.length))
 
   return arr.find(e => e.length == max);
