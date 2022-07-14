@@ -34,7 +34,7 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
     if (second.health > 0) attack(second, first);
   }
 
-  return winner
+  return winner;
 }
 
 console.log(declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"));
