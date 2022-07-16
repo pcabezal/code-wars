@@ -7,7 +7,3 @@ function twoSum(numbers, target) {
         if (finded > -1) return [i, finded] 
     }
 }
-
-console.log(twoSum([1,2,3], 4));
-
-console.log(twoSum([2,2,3], 4))
