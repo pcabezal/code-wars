@@ -1,7 +1,18 @@
+// i'm not proud but I did it
+
 function incrementString (string) {
-    if (!string) return 1
-    let letters = string.match(/[a-z]/gi).join('');
+    if (!string) return '1'
+  
+    let letters = string.match(/[a-z]/gi);
+    if (letters) {
+      letters = letters.join('');
+    } else {
+      letters = '';
+    }
+  
     let numbers = string.match(/\d/g);
+    if (!numbers) return letters + 1;
+  
     let finalNum = '';
 
     let firstNonZero = numbers.findIndex(e => e > 0);
@@ -18,5 +29,3 @@ function incrementString (string) {
     return letters + finalNum;
 
 }
-
-console.log(incrementString("foobar000"));
