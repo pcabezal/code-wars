@@ -1,6 +1,6 @@
 // i'm not proud but I did it
 
-function incrementString (string) {
+function incrementString (string) {g
     if (!string) return '1'
   
     let letters = string.match(/[a-z]/gi);
