@@ -1,5 +1,6 @@
 function stockList(listOfArt, listOfCat){
-    if (!listOfArt || !listOfCat) return '';
+    console.log(listOfArt, listOfCat);
+    if (!listOfArt.length || !listOfCat.length) return '';
 
     let inventory = {};
 
