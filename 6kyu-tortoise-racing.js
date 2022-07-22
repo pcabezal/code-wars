@@ -9,11 +9,3 @@ function race(v1, v2, g) {
 
     return [hours, minutes, finalseconds]
 }
-
-console.log(race(720, 850, 70));
-
-console.log(race(80, 91, 37));
-
-//0.5384615384615384
-
-// .538 * 60 min = 
