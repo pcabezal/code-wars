@@ -1,19 +1,34 @@
-function race(v1, v2, g) {
-    if (v1 >= v2) return null;
-    let catchUpTimeHours = g / (v2 - v1);
+function diamond(n){
+    if (n%2 == 0 || n <= 0) return null;
+    let diam = '';
+    let half = Math.ceil(n/2);
+    let star = '*';
+    let space = ' ';
 
-    let seconds = Math.floor(catchUpTimeHours * 60 * 60);
-    let hours = Math.floor(seconds / 3600);
-    let minutes = Math.floor((seconds - hours*3600) / 60);
-    let finalseconds = Math.floor(seconds - hours*3600 - minutes*60);
+    for (let i = 0; i < n; i++) {
+        if (i < half) string += 
+        
+    }
 
-    return [hours, minutes, finalseconds]
+
+
+    return half;
 }
 
-console.log(race(720, 850, 70));
 
-console.log(race(80, 91, 37));
+// function diamond(l, i = 1) {
+//     const
+//         STAR = '*',
+//         SPACE = ' ',
+//         LINE = SPACE.repeat((l - i) / 2) + STAR.repeat(i);
 
-//0.5384615384615384
+//     console.log(LINE);
+//     if (i >= l) return;
+//     diamond(l, i + 2);
+//     console.log(LINE);
+// }
 
-// .538 * 60 min = 
+console.log(diamond(3));
+console.log(diamond(5));
+
+// console.log(" *\n***\n *\n");
