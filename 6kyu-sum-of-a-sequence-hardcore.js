@@ -1,4 +1,5 @@
 const sequenceSum = (begin, end, step) => {
+    if (begin < end && step < 0) return 0;
     let sum = 0;
 
     if (begin > end && step < 0) {
@@ -11,8 +12,5 @@ const sequenceSum = (begin, end, step) => {
         }
     }
 
-
     return sum;
 };
-
-console.log(sequenceSum(-1, -5, -3))
