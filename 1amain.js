@@ -1,12 +1,6 @@
-function tribonacci(signature,n){
-  let arr = [...signature];
-  let arr2 = [];
-  for (let i = 2; i < n-1; i++) {
-    arr.push(arr[i-2] + arr[i-1] + arr[i])
-  }
-  return arr.slice(0, n)
+function minValue(values){
+    const singles = [...new Set(values.sort())].join('')
+    console.log(singles);
 }
 
-console.log(tribonacci([1,1,1],10));
-console.log(tribonacci([1,1,1],1));
-console.log(tribonacci([1,1,1],0))
+minValue([8,8,1,2,2,2,3,4,5,5])
