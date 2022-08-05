@@ -1,19 +1,28 @@
-function queueTime(customers, n) {
-    cashiers = new Array(n).fill(0)
+// function capitalize(s){
+//     let str1 = ''
+//     let str2 = ''
+//     for (let i = 0; i < s.length; i++) {
+//         (i%2 == 0) ? str1 += s[i].toUpperCase() : str1 += s[i]
+//     }
+//     for (let i = 0; i < s.length; i++) {
+//         (i%2 == 0) ? str2 += s[i] : str2 += s[i].toUpperCase() 
+//     }
 
+//     return [str1, str2];
+// };
 
-    customers.forEach((e,i) => {
-        for (let index = 0; index < cashiers.length; index++) {
-            if (cashiers[index] == Math.min(...cashiers)) {
-                cashiers[index] += e;
-                console.log(cashiers);
-                break;
-            } 
+function capitalize(s){
+    let str1 = ''
+    let str2 = ''
+    for (let i = 0; i < s.length; i++) {
+        if (i%2 == 0) {
+            str1 += s[i].toUpperCase();
+            str2 += s[i];
+        } else {
+            str1 += s[i]
+            str2 += s[i].toUpperCase() 
         }
-    });
+    }
 
-    return Math.max(...cashiers)
-}
-
-// console.log(queueTime([1,2,3,4], 1));
-console.log(queueTime([2,2,3,3,4,4], 2));
+    return [str1, str2];
+};
