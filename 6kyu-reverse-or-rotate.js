@@ -1,5 +1,3 @@
-console.log(['9', '1', '3', '5', '0', '4', '4'].reverse());
-
 function revrot(str, sz) {
     if (sz <= 0 || str == '' || sz > str.length) return '';
 
@@ -12,14 +10,11 @@ function revrot(str, sz) {
         let nums = e.split('')
         let cubes = nums.reduce((p,c) => p + c**3, 0)
         if (cubes % 2 == 0) {
-            console.log(nums);
-            return nums.reverse.join('')
+            return nums.reverse().join('')
         } else {
             return e.slice(1) + e.slice(0,1)
         }
-
     }).join('')
-
 }
 
 // console.log(revrot("12345", 2));
