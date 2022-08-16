@@ -1,32 +1,16 @@
-function thirt(n) {
-    let mults = [1, 10, 9, 12, 3, 4];
-    let num = n;
-    let result = 0;
-    let res;
-
-
-    while ( result !== res) {
-        res = 0;
-        num = n.toString().split('').reverse();
-
-        let ind = -1;
-        for (let i = 0; i < num.length; i++) {
-            ind++;
-            if (ind > 5) ind = 0;
-            res += num[i] * mults[ind];
-        }
-
-        if (result !== res) {
-            n = res;
-            result = res;
-            res = 0;
-        }
+function dataReverse(data) {
+    let arr = [];
+    let concat = data.join('');
+    let i = 0;
+    while (i < concat.length) {
+        arr.unshift(concat.slice(i, i+8) )
+        i += 8;
     }
-
-    
-    return result;
+    return arr.join('').split('').map(e => +e  );
 }
 
-console.log(thirt(1234567));
-console.log(thirt(178));
-console.log(thirt(87));
+console.log(dataReverse([1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]));
+
+
+// const data1 = [1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]
+// const data2 = [1,0,1,0,1,0,1,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1]
