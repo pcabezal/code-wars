@@ -27,6 +27,16 @@ function thirt(n) {
     return result;
 }
 
-console.log(thirt(1234567));
-console.log(thirt(178));
-console.log(thirt(87));
+// way better
+// const remainders = [1, 10, 9, 12, 3, 4];
+
+// function thirt(n) {
+//     const r = n
+//       .toString()
+//       .split('')
+//       .reverse()
+//       .reduce( (a,b, index) => parseInt(a) + b*remainders[index%remainders.length] );
+
+//       return n === r ? parseInt(n) : thirt(r);
+      
+// }
