@@ -1,16 +1,12 @@
-function dataReverse(data) {
-    let arr = [];
-    let concat = data.join('');
-    let i = 0;
-    while (i < concat.length) {
-        arr.unshift(concat.slice(i, i+8) )
-        i += 8;
+function factorial(n){
+    if (n==0) return 1;
+    let result = 1;
+
+    for (let i = 1; i <= n; i++) {
+        result *= i
     }
-    return arr.join('').split('').map(e => +e  );
+
+    return result
 }
 
-console.log(dataReverse([1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]));
-
-
-// const data1 = [1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]
-// const data2 = [1,0,1,0,1,0,1,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1]
+console.log(factorial(5));
