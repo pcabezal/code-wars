@@ -1,3 +1,5 @@
+// doesnt complete the larger test cases but i cant figure out why! seems to be solid to me. frick.
+
 function uniqCount(str) {
     let n = str.toLowerCase();
     let arr = n.split('');
@@ -20,20 +22,6 @@ function uniqCount(str) {
         if (counts[item] > 1) same *= fact(counts[item]);
     }
 
-    console.log(counts, same);
-
-    console.log(fact(n.length));
-    console.log(BigInt(fact(n.length)));
-
     return (same>1) ? BigInt(fact(n.length)) / BigInt(same) : BigInt(fact(n.length))
 
 }
-
-
-
-console.log(uniqCount('aaaaabbbbbfffffeeeee'));
-// console.log(uniqCount('ABB'));
-// console.log(uniqCount('ABBB'));
-// console.log(uniqCount('ABCD'));
-// console.log(uniqCount("ABcDEFgHIJbaslidbailsbdilasbdkanmsdklhkbHSJKHVDASH"));
-// console.log(uniqCount("ABcDEFgHIJbaslidbailsbdilasbdkanmsdklhkbHSJKHVDASH"));
