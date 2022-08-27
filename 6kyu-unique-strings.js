@@ -22,6 +22,6 @@ function uniqCount(str) {
         if (counts[item] > 1) same *= fact(counts[item]);
     }
 
-    return (same>1) ? BigInt(fact(n.length)) / BigInt(same) : BigInt(fact(n.length))
+    return  BigInt(fact(n.length)) / BigInt(same); 
 
 }
