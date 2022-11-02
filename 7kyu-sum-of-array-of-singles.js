@@ -13,12 +13,13 @@ function repeats(arr){
   let sum = 0;
 
   arr.forEach(el => {
-    library[el] ? library[el]++ : library[el] = 1;
+    if (!library[el]) {
+        library[el] = 1;
+        sum += el;
+    } else {
+        sum -= el;
+    }
   });
-
-  for (const key in library) {
-    if (library[key] == 1) sum += +key
-  }
 
   return sum
 };
