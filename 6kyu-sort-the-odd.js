@@ -14,15 +14,17 @@ function sortArray(array) {
 // v2.0
 function sortArray(array) {
   // filter out even numbers, then sort odd numbers in ascending order
-   let sorted = array.filter(x => x%2 !== 0).sort((a,b) => a - b);
+   let sortedOdds = array.filter(x => x%2).sort((a,b) => a - b);
    
-   // loop through original array replacing odd numbers with sorted values
+   // map through original array replacing odd numbers with sorted values
    let pointer = 0;
-   for (let i = 0; i < array.length; i++) {
-     if (array[i] % 2 !== 0) {
-       array[i] = sorted[pointer];
-       pointer++;
-     }
-   }
-   return array
- }
+   return array.map(e => {
+    if (e%2) {
+      let replace = sortedOdds[pointer];
+      pointer++;
+      return replace;
+    } else {
+      return e;
+    }
+   })
+}
