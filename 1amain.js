@@ -1,21 +1,11 @@
-const removeConsecutiveDuplicates = s => {
-  let split = s.split(' ');
+function count (string) {  
+  const library = {};
 
-  let uniques = [];
-
-  for (let i = 0; i < split.length; i++) {
-     if (split[i] !== split[i+1]) uniques.push(split[i])
+  for (let i = 0; i < string.length; i++) {
+    !library[string[i]] ? library[string[i]] = 1 :  library[string[i]]++    
   }
 
-  return uniques.join(' ')
+   return library;
 }
 
-//better
-function removeConsecutiveDuplicates(str) {
-  return str
-    .split(" ")
-    .filter((word, index, arr) => word !== arr[index + 1])
-    .join(" ");
-}
-
-console.log(removeConsecutiveDuplicates("alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"));
+console.log(count('aba'));
