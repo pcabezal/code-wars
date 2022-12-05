@@ -1,22 +1,22 @@
-function count (str) {  
-    let arr = str.split('');
-    let obj = {};
-    arr.forEach(element => {
-        obj[element] = obj[element] + 1 || 1;
-    })
-    return obj;
-}
+// function count (str) {  
+//     let arr = str.split('');
+//     let obj = {};
+//     arr.forEach(element => {
+//         obj[element] = obj[element] + 1 || 1;
+//     })
+//     return obj;
+// }
 
-console.log(count('anusa'));
+// console.log(count('anusa'));
 
 // 2.0
 
 function count (string) {  
     const library = {};
-    for (let i = 0; i < string.length; i++) {
-      !library[string[i]] ? library[string[i]] = 1 :  library[string[i]]++    
+    for (const s in string) {
+        !library[s] ? library[s] = 1 : library[s]++
     }
     return library;
-  }
+}
   
-  console.log(count('aba'));
+console.log(count('aba'));
