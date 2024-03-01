@@ -4,3 +4,5 @@ const chooseBestSum = (t, k, ls) =>
     .map(val => val.reduce((pre, val) => pre + val))
     .filter(val => val <= t)
     .sort((a, b) => a - b).pop() || null;
+
+    // refactor
