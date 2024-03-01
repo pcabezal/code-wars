@@ -3,7 +3,7 @@ function expression(number, operation){
 		return number;
 	return operation(number);
 }
-
+// note test
 function zero(operation) { return expression(0, operation); }
 function one(operation) { return expression(1, operation); }
 function two(operation) { return expression(2, operation); }
