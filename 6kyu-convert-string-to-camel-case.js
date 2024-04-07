@@ -8,4 +8,3 @@ function toCamelCase(str) {
   let camelCaseStr = words.join('');
   return camelCaseStr;
 }
-
