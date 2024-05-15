@@ -9,7 +9,7 @@ function sumDigits(number) {
   let sum = 0
   for (let i = 0; i < intArr.length; i++) {
     sum += +intArr[i]
-  }
+  } 
   return sum
 }
 
