@@ -3,7 +3,6 @@ var humanYearsCatYearsDogYears = function(humanYears) {
   let dogYears = 0
 
   for (let i = 1; i <= humanYears; i++) {
-    console.log(i);
     if (i == 1) {
       catYears += 15
       dogYears += 15
