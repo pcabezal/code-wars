@@ -9,4 +9,3 @@ function toCamelCase(str) {
   return camelCaseStr;
 }
 
-
