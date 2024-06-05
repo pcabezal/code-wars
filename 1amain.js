@@ -8,4 +8,4 @@ function count (string) {
    return library;
 }
 
-console.log(count('aba'));
+// console.log(count('aba'));
