@@ -6,3 +6,4 @@ function solution(digits){
   }
   return greatest
 }
+
