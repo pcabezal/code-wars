@@ -1,15 +1,12 @@
-function narcissistic(value) {
-  //separate value into array
-  let str = value.toString();
-  let arr = str.split("");
-  let power = str.length;
-  let sum = 0
+function solution(str){
+   let arr = []
+   if (str.length % 2 == 0) str+= "_"
 
-  //iterate through arr testing for narcisism
-  for (let i = 0; i < arr.length; i++) {
-    let num = arr[i]
-    sum += num**power;
-  }
+console.log(str[0]);
 
-  return sum == value ? true : false
+   for (let i = 0; i < arr.length/2; i+2) {
+    arr.push(str[i] + str[i+1])
+   }
+
+   return arr
 }

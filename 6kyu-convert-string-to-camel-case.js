@@ -1,5 +1,3 @@
-
-
 function toCamelCase(str) {
   let words = str.split(/[-_]/);
 
