@@ -1,18 +1,28 @@
-/* function digitalRoot(n) {
+function titleCase(title, minorWords) {
+  // split title into lowercase array
+  let arr = title.toLowerCase().split(" ")
+  let minors = minorWords.toLowerCase().split(" ")
 
- let num = n
- // if n.length > 1, split n into array of single digits
- while (num.toString().length > 1) {
-  let digits = (""+n).split("");
-  num = digits.reduce((partialSum, a) => partialSum + a, 0)
-  console.log(num);
- }
- // sum array
- // repeat
- //return sum
- return num
+  // make object dict of minorWords
+  let dict = {}
+
+  minors.forEach(word => { 
+    dict[word] = true;
+  });
+
+    let result = arr.map((word, index) => {
+        if (index == 0) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        } else if (dict[word] == true) {
+            return word
+        } else {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }
+    });
+
+
+  return result.join(" ")
+
 }
 
-console.log(digitalRoot(16)); */
-
-console.log( (""+16).split(""));
+console.log(titleCase('THE WIND IN THE WILLOWS', 'The In'));
