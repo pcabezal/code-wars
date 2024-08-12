@@ -21,9 +21,3 @@ function solution (roman) {
 
 	return sum;
 }
-
-console.log(solution("MM"));
-
-console.log(solution("MCMXC"));
-
-console.log(solution("IV"));
