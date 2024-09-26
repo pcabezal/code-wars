@@ -26,4 +26,4 @@ console.log(solution("MM"));
 
 console.log(solution("MCMXC"));
 
-console.log(solution("IV"));    
+console.log(solution("IV"));     
