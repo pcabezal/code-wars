@@ -24,6 +24,6 @@ function solution (roman) {
 
 console.log(solution("MM"));
 
-console.log(solution("MCMXC")); 
+console.log(solution("MCMXC"));  
 
 console.log(solution("IV"));      
